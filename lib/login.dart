@@ -13,35 +13,51 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              Card(
-                child: Container(
-                  color: Colors.white,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        'Login',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      TextFormField(
+          child: Container(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Login',
+                      style:
+                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Anda harus login untuk menggunakan aplikasi',
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Username',
                         ),
                       ),
-                      TextFormField(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Password',
                         ),
-                      )
-                    ],
-                  ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: ElevatedButton(
+                        child: Text('Login'),
+                        onPressed: () {},
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
       ),
